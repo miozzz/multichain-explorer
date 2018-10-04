@@ -72,11 +72,12 @@ DEFAULT_TEMPLATE = """
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>%(title)s</title>
+    <title>Amberchain Explorer</title>
 
     <!-- Bootstrap and Theme -->
     <link href="%(dotdot)s%(STATIC_PATH)scss/bootstrap.min.css" rel="stylesheet">
     <link href="%(dotdot)s%(STATIC_PATH)scss/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="%(dotdot)s%(STATIC_PATH)s/abe.css" rel="stylesheet">
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="%(dotdot)s%(STATIC_PATH)sjs/jquery-1.11.3.min.js"></script>
@@ -87,11 +88,10 @@ DEFAULT_TEMPLATE = """
 </head>
 <body>
     <div class="container">
-	<table><td>
-	<a title="Back to home" href="%(dotdot)s%(HOMEPAGE)s"><img src="%(dotdot)s%(STATIC_PATH)slogo32.png" alt="MultiChain logo" /></a>
-	</td><td style="padding-left: 10px;" valign="middle">
-	<h1>%(h1)s<h1>
-	</td></table>
+	<header>
+	    <a title="Back to home" href="%(dotdot)s%(HOMEPAGE)s"><img src="%(dotdot)s%(STATIC_PATH)sambertime_logo.png" alt="MultiChain logo" /></a>
+	    <h1>Amberchain Explorer</h1>
+	</header>
     %(body)s
     <!--<p><a href="%(dotdot)sq">API</a> (machine-readable pages)</p>-->
     <br><br>
@@ -3028,7 +3028,7 @@ class Abe:
             '<form class="form-inline" action="', page['dotdot'], 'search"><p>\n'
             '<div class="form-group">'
             '<input id="search1" type="text" name="q" size="64" value="', escape(q), '" style="height: 32px; margin-right: 10px;"/>'
-            '<button type="submit" class="btn" style="height: 32px; vertical-align: middle;">Search</button>\n'
+            '<button type="submit" class="btn btn-transparent" style="height: 32px; vertical-align: middle;">Search</button>\n'
             '<p class="help-block">Address or hash search requires at least the first ',
             HASH_PREFIX_MIN, ' characters.</p></div></form>\n']
 # MULTICHAIN END

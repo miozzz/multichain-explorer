@@ -15,7 +15,7 @@
    License along with this program.  If not, see
    <http://www.gnu.org/licenses/agpl.html>.
  */
-td, th {
+ td, th {
     font-family: Verdana, Helvetica, sans-serif;
     margin: 0;
     padding: 0 1ex;
@@ -26,6 +26,7 @@ td {
 }
 table {
     border-spacing: 0;
+    color:var(--txt-light)
 }
 .shortlink {
     font-size: smaller;
@@ -33,4 +34,90 @@ table {
 .addrhist .escrow .balance {
     opacity: 0.5; /* standard */
     filter: alpha(opacity = 50); /* MSIE */
+}
+body{
+    --main-yellow: #f1bc44;
+    --bckgrnd-darkest: #1c1c1c;
+    --bckgrnd-darker:  #2c2c2c;
+    --bckgrnd-dark:#4c4e55;
+    --bckgrnd-medium:#757575;
+    --bckgrnd-light: #565860;
+    --txt-darker: #939495;
+    --txt-dark: #989899;
+    --txt-medium: #e2e2e2;
+    --txt-light: #fff;
+    --bttn-font-dark: #000;
+    --searchbar-gray-border: #888888;
+    --bttn-font-light: var(--main-yellow);
+    --border-thin:solid 0.1mm var(--txt-dark);
+    --border-light: solid 0.1mm #656565;
+    background-color: black;
+    background-image: url("/hero-bg-3.jpg") !important;
+  }
+
+body header{
+    display:flex;
+    align-content:center;
+    height: 100px;
+    justify-content: space-between;
+    background: black;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    padding-left: 70px;
+    padding-right: 89px;
+}
+body header a img{
+    height: 100%;
+}
+body header h1 {
+    white-space: nowrap;
+    min-width: 340px;
+    font-family: 'Poppins', sans-serif;
+}
+body > div.container{
+    background:var(--bckgrnd-darkest);
+}
+.table-striped>tbody>tr:nth-of-type(odd){
+      background:var(--bckgrnd-darker);
+}
+body > div.container > div.container,
+body > div.container > :nth-child(2){
+   margin-top:110px;
+}
+h3, h1, p{
+    color:var(--txt-light);
+}
+a, a:focus, a:hover {
+    color:var(--main-yellow)
+}
+div.panel.panel-default{
+    background: none;
+}
+
+div.panel-body{
+    overflow: auto;
+    background: none;
+}
+.table .table{
+    background:none;
+}
+input#search1{
+    background: var(--bckgrnd-dark);
+    border: 1px solid var(--txt-darker);
+    color: var(--txt-light);
+}
+.btn-transparent {
+    background-color: transparent;
+    border-radius: 50px;
+    color: var(--main-yellow);
+    border: 1px solid var(--main-yellow);
+    padding: 0 6px;
+}
+
+.btn-transparent:hover {
+    background-color: var(--main-yellow);
+    color: var(--bttn-font-dark);
+    border: 2px solid var(--main-yellow);
 }
